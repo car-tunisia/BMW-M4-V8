@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BMW M4 V8</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .btn {
+      padding: 20px 40px;
+      margin: 20px;
+      background-color: #ff0000;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 8px;
+    }
+
+    .car-img {
+      width: 600px;
+      margin-top: 40px;
+    }
+
+    .specs {
+      margin-top: 100px;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>BMW M4 V8</h1>
+  <img src="6carouselm4gts3elevenmay2016.webp" alt="BMW M4" class="car-img" />
+
+  <div>
+    <button class="btn" onclick="playSound('start')">Start Engine</button>
+    <button class="btn" onclick="playSound('speed')">Speed Rev</button>
+  </div>
+
+  <div class="specs">
+    <h2>Specs</h2>
+    <p>Engine: 4.4L Twin-Turbo V8</p>
+    <p>Power: 503 hp</p>
+    <p>0–100 km/h: 3.8s</p>
+    <p>Top Speed: 290 km/h</p>
+  </div>
+
+  <audio id="start">
+    <source src="Record_2025-05-06-15-38-05.mp3" type="audio/mp3">
+  </audio>
+
+  <audio id="speed">
+    <source src="Record_2025-05-06-15-36-57.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    let currentAudio = null;
+
+    function playSound(id) {
+      const audio = document.getElementById(id);
+      if (currentAudio && !currentAudio.paused) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+      }
+      currentAudio = audio;
+      audio.currentTime = 0;
+      audio.play();
+    }
+    <script>
+  var password = prompt("Enter the access code:");
+  if (password !== "turboZ-BMW-M4") {
+    document.write("Access Denied");
+    throw new Error("Unauthorized");
+  }
+</script>
+
+  </script>
+
+</body>
+</html>
